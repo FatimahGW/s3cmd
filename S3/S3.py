@@ -111,8 +111,8 @@ class S3Request(object):
             self.s3.config.role_refresh()
             self.headers['x-amz-security-token']=self.s3.config.access_token
         # Add in any extra headers from s3 config object
-		if self.s3.config.extra_headers:
-			self.headers.update(self.s3.config.extra_headers)
+        if self.s3.config.extra_headers:
+	    self.headers.update(self.s3.config.extra_headers)
         self.resource = resource
         self.method_string = method_string
         self.params = params
